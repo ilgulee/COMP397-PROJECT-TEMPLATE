@@ -19,7 +19,7 @@
     
     function Main(){
         console.log("Game Started..");
-        helloLabel=new createjs.Text("Hello, World","40px Consolas","#000000");
+        helloLabel=new createjs.Text("Goodbye, World","40px Consolas","#000000");
         helloLabel.regX=helloLabel.getMeasuredWidth()*0.5;
         helloLabel.regY=helloLabel.getMeasuredLineHeight()*0.5;
         helloLabel.x=320;
