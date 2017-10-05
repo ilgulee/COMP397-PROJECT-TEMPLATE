@@ -1,6 +1,14 @@
 module objects{
     export class Label extends createjs.Text{
         //PRIVATE INSTANCE VARIABLES+++++++++++++++++++++++++++++
+        get TextString():string{
+            return this.text;
+        }
+        set TextString(text:string){
+            this.text=text;
+            this.regX=this.getMeasuredWidth()*0.5;
+            this.regY=this.getMeasuredLineHeight()*0.5;
+        }
         //PUBLIC PROPERTIES++++++++++++++++++++++++++++++++++++++
         //CONSTRUCTORS+++++++++++++++++++++++++++++++++++++++++++
         /**

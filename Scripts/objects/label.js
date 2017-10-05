@@ -12,7 +12,6 @@ var objects;
 (function (objects) {
     var Label = /** @class */ (function (_super) {
         __extends(Label, _super);
-        //PRIVATE INSTANCE VARIABLES+++++++++++++++++++++++++++++
         //PUBLIC PROPERTIES++++++++++++++++++++++++++++++++++++++
         //CONSTRUCTORS+++++++++++++++++++++++++++++++++++++++++++
         /**
@@ -35,6 +34,19 @@ var objects;
             _this.y = y;
             return _this;
         }
+        Object.defineProperty(Label.prototype, "TextString", {
+            //PRIVATE INSTANCE VARIABLES+++++++++++++++++++++++++++++
+            get: function () {
+                return this.text;
+            },
+            set: function (text) {
+                this.text = text;
+                this.regX = this.getMeasuredWidth() * 0.5;
+                this.regY = this.getMeasuredLineHeight() * 0.5;
+            },
+            enumerable: true,
+            configurable: true
+        });
         return Label;
     }(createjs.Text));
     objects.Label = Label;
